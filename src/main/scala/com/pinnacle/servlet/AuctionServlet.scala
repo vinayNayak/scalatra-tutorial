@@ -7,6 +7,7 @@ import org.json4s.{DefaultFormats, Formats}
 import org.scalatra.json._
 
 import com.pinnacle.repository.ItemRepository
+import com.pinnacle.domain.Bid
 
 class AuctionServlet extends ScalatraServlet with ScalateSupport with JacksonJsonSupport {
 
@@ -24,5 +25,10 @@ class AuctionServlet extends ScalatraServlet with ScalateSupport with JacksonJso
       case Some(item) => Ok(item)
       case None => NotFound(s"Item with id: ${params("id")} not found")
     }
+  }
+
+  post("/items/:id/bid") {
+    val bid = parsedBody.extract[Bid]
+    println(s"Creating bid ${bid.toString}")
   }
 }
