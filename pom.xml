@@ -10,7 +10,7 @@
     <packaging>war</packaging>
 
     <properties>
-        <scala.version>2.10.2</scala.version>
+        <scala.version>2.10.3</scala.version>
         <scala.tools.version>2.15.2</scala.tools.version>
         <scalatra.version>2.2.2</scalatra.version>
         <jetty.maven.plugin.version>9.1.3.v20140225</jetty.maven.plugin.version>
@@ -19,7 +19,7 @@
         <ch.qos.logback.version>1.1.1</ch.qos.logback.version>
         <lift.json.version>2.6-M2</lift.json.version>
         <json4s.version>3.2.7</json4s.version>
-        <casbah.version>2.7.0-RC3</casbah.version>
+        <casbah.version>2.7.0</casbah.version>
         <scalatest.version>2.1.2</scalatest.version>
     </properties>
 
@@ -57,14 +57,14 @@
         </dependency>
         <dependency>
             <groupId>org.scala-lang</groupId>
-            <artifactId>scala-reflect</artifactId>
-            <version>${scala.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.scala-lang</groupId>
             <artifactId>scala-compiler</artifactId>
             <version>${scala.version}</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-reflect</artifactId>
+            <version>${scala.version}</version>
         </dependency>
         <dependency>
             <groupId>org.scalatra</groupId>
@@ -125,7 +125,7 @@
         </dependency>
         <dependency>
             <groupId>org.mongodb</groupId>
-            <artifactId>casbah_2.9.3</artifactId>
+            <artifactId>casbah_2.10</artifactId>
             <version>${casbah.version}</version>
         </dependency>
     </dependencies>
