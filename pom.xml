@@ -19,6 +19,8 @@
         <ch.qos.logback.version>1.1.1</ch.qos.logback.version>
         <lift.json.version>2.6-M2</lift.json.version>
         <json4s.version>3.2.7</json4s.version>
+        <casbah.version>2.7.0-RC3</casbah.version>
+        <scalatest.version>2.1.2</scalatest.version>
     </properties>
 
     <build>
@@ -87,6 +89,11 @@
             <artifactId>scalatra-json_2.10</artifactId>
             <version>${scalatra.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.scalatest</groupId>
+            <artifactId>scalatest_2.10</artifactId>
+            <version>${scalatest.version}</version>
+        </dependency>
 
         <!-- Jetty -->
 
@@ -115,6 +122,11 @@
             <groupId>org.json4s</groupId>
             <artifactId>json4s-jackson_2.10</artifactId>
             <version>${json4s.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>casbah_2.9.3</artifactId>
+            <version>${casbah.version}</version>
         </dependency>
     </dependencies>
 </project>
